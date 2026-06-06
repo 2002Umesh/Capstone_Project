@@ -1,0 +1,70 @@
+pipeline {
+    agent any
+
+    tools {
+        maven 'Maven3'
+        jdk 'JDK'
+    }
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/2002Umesh/Capstone_Project'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                bat 'mvn clean'
+            }
+        }
+
+        stage('Compile') {
+            steps {
+                bat 'mvn compile'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                bat 'mvn test'
+            }
+
+            post {
+                always {
+                    junit '**/target/surefire-reports/*.xml'
+                }
+            }
+        }
+
+        stage('Package') {
+            steps {
+                bat 'mvn package'
+            }
+        }
+
+        stage('Docker Build') {
+            steps {
+                bat 'docker build -t cucumber-framework .'
+            }
+        }
+
+        stage('Docker Run') {
+            steps {
+                bat 'docker run cucumber-framework'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Build Successful'
+        }
+
+        failure {
+            echo 'Build Failed'
+        }
+    }
+}
