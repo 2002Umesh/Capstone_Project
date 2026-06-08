@@ -51,7 +51,13 @@ public class DriverFactory {
 			options.addArguments("--disable-gpu");
 			options.addArguments("--no-sandbox");
 			options.addArguments("--disable-dev-shm-usage");
-			options.addArguments("--remote-allow-origins=*");
+
+			String profile =
+			        System.getProperty("java.io.tmpdir")
+			        + "\\edge-profile-"
+			        + System.currentTimeMillis();
+
+			options.addArguments("--user-data-dir=" + profile);
 
 			driver.set(new EdgeDriver(options));
 		}
