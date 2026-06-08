@@ -16,7 +16,7 @@ public class ExtentManager {
                             "reports/ExtentReport.html");
 
             spark.config().setReportName(
-                    "PHPTravels Automation Report");
+                    "Para Bank Automation Report");
 
             spark.config().setDocumentTitle(
                     "Automation Results");

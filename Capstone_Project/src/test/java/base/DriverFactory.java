@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -44,8 +45,15 @@ public class DriverFactory {
 		else if (browser.equalsIgnoreCase("edge")) {
 
 //			WebDriverManager.edgedriver().setup();
+			EdgeOptions options = new EdgeOptions();
 
-			driver.set(new EdgeDriver());
+			options.addArguments("--headless=new");
+			options.addArguments("--disable-gpu");
+			options.addArguments("--no-sandbox");
+			options.addArguments("--disable-dev-shm-usage");
+			options.addArguments("--remote-allow-origins=*");
+
+			driver.set(new EdgeDriver(options));
 		}
 
 		getDriver().manage().window().maximize();
