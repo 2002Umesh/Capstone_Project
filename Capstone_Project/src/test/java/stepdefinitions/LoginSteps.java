@@ -43,14 +43,14 @@ public class LoginSteps {
 //		System.out.println(DriverFactory.getDriver().findElement(By.xpath("//h1")).toString());
 
 		// Critical validation
-//		Assert.assertTrue(DriverFactory.getDriver().getCurrentUrl().contains("overview"), "Login Failed");
+		Assert.assertTrue(DriverFactory.getDriver().getCurrentUrl().contains("overview"), "Login Failed");
 
 		// Additional validations
-//		soft.assertEquals(DriverFactory.getDriver().getTitle(), "ParaBank | Accounts Overview", "Login title mismatch");
-//
-//		soft.assertTrue(DriverFactory.getDriver().findElement(By.xpath("//h1")).isDisplayed(), "Login heading missing");
-//
-//		soft.assertAll();
+		soft.assertEquals(DriverFactory.getDriver().getTitle(), "ParaBank | Accounts Overview", "Login title mismatch");
+
+		soft.assertTrue(DriverFactory.getDriver().findElement(By.xpath("//h1")).isDisplayed(), "Login heading missing");
+
+		soft.assertAll();
 
 		System.out.println("Login Successful");
 		
