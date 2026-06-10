@@ -10,7 +10,8 @@ import utilities.WaitUtil;
 public class UpdateContactInfoPage {
 	WebDriver driver = DriverFactory.getDriver();
 	
-	private static final By UPDATE_CONTACT_INFO_LINK = By.cssSelector("a[href='updateprofile.htm']");
+//	private static final By UPDATE_CONTACT_INFO_LINK = By.cssSelector("a[href='updateprofile.htm']");
+	private static final By UPDATE_CONTACT_INFO_LINK = By.linkText("Update Contact Info");
 	private static final By ADDRESS = By.id("customer.phoneNumber");
 	private static final By UPDATE_PROFILE = By.cssSelector("input[value='Update Profile']");
 	

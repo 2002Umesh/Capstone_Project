@@ -11,7 +11,8 @@ import utilities.WaitUtil;
 public class TransferFundsPage {
 	WebDriver driver = DriverFactory.getDriver();
 	
-	private static final By TRANSFER_FUNDS_LINK = By.cssSelector("a[href='transfer.htm']");
+//	private static final By TRANSFER_FUNDS_LINK = By.cssSelector("a[href='transfer.htm']");
+	private static final By TRANSFER_FUNDS_LINK = By.linkText("Transfer Funds");
 	private static final By TRANSFER_FUNDS = By.id("amount");
 	private static final By TO_ACCOUNT = By.id("toAccountId");
 	private static final By TRANSFER_BUTTON = By.cssSelector("input[value='Transfer']");

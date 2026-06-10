@@ -12,7 +12,8 @@ import base.DriverFactory;
 public class OpenNewAccountPage {
 	WebDriver driver = DriverFactory.getDriver();
 	
-	private static final By OPEN_NEW_ACCOUNT = By.cssSelector("a[href='openaccount.htm']");
+//	private static final By OPEN_NEW_ACCOUNT = By.cssSelector("a[href='openaccount.htm']");
+	private static final By OPEN_NEW_ACCOUNT = By.linkText("Open New Account");
 	private static final By ACCOUNT_TYPE = By.id("type");
 	private static final By SUBMIT_BUTTON = By.cssSelector("input[value='Open New Account']");
 	private static final By ACCOUNT_DETAILS = By.id("newAccountId");

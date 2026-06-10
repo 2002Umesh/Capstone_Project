@@ -9,7 +9,8 @@ import utilities.WaitUtil;
 public class RequestLoanPage {
 	WebDriver driver = DriverFactory.getDriver();
 	
-	private static final By REQUEST_LOAN_LINK = By.cssSelector("a[href='requestloan.htm']");
+//	private static final By REQUEST_LOAN_LINK = By.cssSelector("a[href='requestloan.htm']");
+	private static final By REQUEST_LOAN_LINK = By.linkText("Request Loan");
 	private static final By LOAN_AMOUNT = By.id("amount");
 	private static final By DOWN_PAYMENT = By.id("downPayment");
 	private static final By APPLY_NOW = By.cssSelector("input[value='Apply Now']");
