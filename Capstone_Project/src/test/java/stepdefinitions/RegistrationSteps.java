@@ -44,17 +44,17 @@ public class RegistrationSteps {
 //		System.out.println(DriverFactory.getDriver().getTitle());
 //		System.out.println(DriverFactory.getDriver().findElement(By.xpath("//h1")).toString());
 
-//		// Critical
-//		Assert.assertTrue(url.contains("register"), "Registration Failed");
-//
-//		// Extra validations
-//		soft.assertEquals(DriverFactory.getDriver().getTitle(), "ParaBank | Customer Created",
-//				"Title mismatch");
-//
-//		soft.assertTrue(DriverFactory.getDriver().findElement(By.xpath("//h1")).isDisplayed(),
-//				"Page heading not displayed");
-//
-//		soft.assertAll();
+		// Critical
+		Assert.assertTrue(url.contains("register"), "Registration Failed");
+
+		// Extra validations
+		soft.assertEquals(DriverFactory.getDriver().getTitle(), "ParaBank | Customer Created",
+				"Title mismatch");
+
+		soft.assertTrue(DriverFactory.getDriver().findElement(By.xpath("//h1")).isDisplayed(),
+				"Page heading not displayed");
+
+		soft.assertAll();
 
 		System.out.println("Registration successful");
 
