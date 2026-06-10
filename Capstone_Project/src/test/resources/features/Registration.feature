@@ -12,4 +12,4 @@ Feature: Registration_Module
 
     Examples:
       | firstname | lastname | address         | city     | state | zip   | phone      | ssn         | username  | password    | confirm_password |
-      | John      | Doe      | 123 Main Street | New York | NY    | 10001 | 9876543210 | 123-45-6789 | johndoe39 | Password123 | Password123      |
+      | John      | Doe      | 123 Main Street | New York | NY    | 10001 | 9876543210 | 123-45-6789 | johndoe40 | Password123 | Password123      |
